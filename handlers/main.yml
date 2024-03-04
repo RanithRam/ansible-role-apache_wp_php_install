@@ -1,0 +1,14 @@
+---
+# handlers file for apache-wp-php
+- name: restart apache
+  ansible.builtin.service:
+    name: "httpd"
+    state: restarted
+  when: os_family == 'RedHat'
+
+- name: restart apache
+  ansible.builtin.service:
+    name: "apache2"
+    state: restarted
+  when: os_family == 'Debian'
+

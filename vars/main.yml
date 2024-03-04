@@ -1,0 +1,6 @@
+---
+# vars file for apache-wp-php
+website_source_dir: "/tmp/website"
+website_dest_dir: "/var/www/html"
+os_family: "{{ ansible_facts['os_family'] }}"
+
